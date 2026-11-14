@@ -3,12 +3,12 @@ import streamlit as st
 
 API_URL = "http://127.0.0.1:8000"
 
-st.title("Aplikasi Tim Pengembang")
-nama = st.text_input("Masukkan nama")
+st.title("Nama Aplikasi Kami")
+nama = st.text_input("Ketik nama Anda di sini")
 
 if st.button("Kirim"):
     if not nama:
-        st.warning("Nama tidak boleh kosong")
+        st.warning("Isi nama dulu ya")
     else:
         try:
             r = requests.get(f"{API_URL}/hello/{nama}", timeout=5)

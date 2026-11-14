@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="API Aplikasi Tim")
+app = FastAPI(title="API Aplikasi Kami")
 
 
 @app.get("/")
@@ -10,4 +10,4 @@ def root():
 
 @app.get("/hello/{nama}")
 def hello(nama: str):
-    return {"pesan": f"Halo, {nama}!"}
+    return {"pesan": f"Selamat Datang, {nama}!"}
