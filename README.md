@@ -1,12 +1,20 @@
 # Project
 
-> Deskripsi singkat aplikasi: apa fungsinya dan masalah apa yang diselesaikan.
+> Aplikasi Chatbot Layanan Berbasis Retrieval-Augmented Generation (RAG) dengan arsitektur
+Hybrid Search (kombinasi pencarian semantik berbasis vektor ChromaDB dan pencarian kata kunci
+presisi BM25) yang mampu menjawab pertanyaan pelanggan maupun staf secara akurat berdasarkan
+dokumen resmi mitra. Sistem ini dilengkapi dengan deteksi format file berbasis MIME type, ekstraksi
+tabel dokumen terstruktur (Markdown Table menggunakan pdfplumber) untuk menjaga ketepatan
+angka harga/simulasi kredit, mekanisme penyaring relevansi (Cosine Similarity Gatekeeper) untuk
+menolak pertanyaan di luar cakupan dokumen (anti-halusinasi), dukungan percakapan kontekstual
+multi-giliran (conversational memory), serta sitasi otomatis yang mencantumkan nama dokumen
+sumber dan nomor halaman pada setiap jawaban.
 
 ## Tim Pengembang
 
 | Isi Nama | Username GitHub | Peran tiap anggota |
 |---|---|---|
-| Nama Ketua | @username | Ketua / PIC |
+| Angga Putra Prasetia Nugraha | ghaputraa | Ketua / PIC |
 | Nama Anggota 2 | @username | Backend |
 | Nama Anggota 3 | @username | Frontend |
 
@@ -16,11 +24,11 @@
 |---|---|
 | API (backend) | FastAPI |
 | UI (frontend) | Streamlit / Web UI *(sesuai keputusan tim)* |
-| Bahasa | Python 3.13 |
+| Bahasa | Python 3.12 |
 
 Keputusan teknis lengkap: [`docs/keputusan-teknis.md`](docs/keputusan-teknis.md)
 
-> **Catatan versi Python:** gunakan **Python 3.13**. Python 3.15 terlalu baru dan beberapa library (misalnya `pyyaml`) gagal dipasang di dalamnya.
+> **Catatan versi Python:** gunakan **Python 3.12**. Python 3.15 terlalu baru dan beberapa library (misalnya `pyyaml`) gagal dipasang di dalamnya.
 
 ## Struktur Folder
 
@@ -51,7 +59,7 @@ cd Project
 git checkout dev
 
 # 3. Buat dan aktifkan virtual environment
-py -3.13 -m venv venv
+py -3.12 -m venv venv
 venv\Scripts\activate
 
 # 4. Instal dependensi
