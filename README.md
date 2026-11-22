@@ -26,13 +26,18 @@ Keputusan teknis lengkap: [`docs/keputusan-teknis.md`](docs/keputusan-teknis.md)
 
 ```
 Project/
+├── app.py
+├── rag_engine.py
 ├── backend/
 │   ├── __init__.py
 │   └── main.py
 ├── frontend/
 │   └── app.py
+├── tests/
+│   └── test_frontend.py
 ├── docs/
-│   └── keputusan-teknis.md
+│   ├── keputusan-teknis.md
+│   └── penjelasan-project.md
 ├── .github/
 │   └── pull_request_template.md
 ├── .gitignore
