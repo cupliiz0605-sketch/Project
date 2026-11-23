@@ -1,0 +1,10 @@
+# Default: semua file harus disetujui ketua tim
+*                    @username-ketua
+
+# Folder tertentu disetujui anggota terkait
+/frontend/           @username-anggota1
+/backend/            @username-anggota2 @username-ketua
+/docs/               @username-anggota3
+
+# File penting
+/.github/            @username-ketua
